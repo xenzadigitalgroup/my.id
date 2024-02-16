@@ -135,6 +135,44 @@
             width: 100%; /* Pengisi penuh lebar dalam kotak */
             height: auto; /* Tinggi otomatis sesuai lebar */
         }
+        /* Warna hijau untuk persentase yang positif */
+.finansial-container span.green {
+    color: green;
+}
+
+/* Warna merah untuk persentase yang negatif */
+.finansial-container span.red {
+    color: red;
+}
+
+/* Warna hijau untuk nominal positif */
+.finansial-container span.green-amount {
+    color: green;
+}
+
+/* Warna hijau untuk persentase yang positif di dalam marquee */
+.marquee span.green {
+    color: green;
+}
+
+/* Warna merah untuk persentase yang negatif di dalam marquee */
+.marquee span.red {
+    color: red;
+}
+.marquee {
+        display: inline-block;
+        white-space: nowrap;
+        animation: marquee 12s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
     </style>
 </head>
 <body>
@@ -167,6 +205,9 @@
         <h1>MARKET RDN XENZA DIGITAL GROUP</h1>
     </header>
     <div id="graph-container">
+        <div class="informasi">
+            <p class="marquee">XDG-SAHAM🔺<span class="green">+11,7%</span> | XDG-OBG🔻<span class="red">-7.89%</span> | XDG-MMRKT🔺<span class="green">+9,3%</span> | XBNK🔺<span class="green">+Rp476.8Jt</span> | Int🔺<span class="green">+3,5%</span></p>
+        </div>
         <h3>Market RDN Graph XENZA DIGITAL GROUP (2020-2024)</h3>
         <p>Keterngan :
             Nilai adalah harga dalam satuan "Juta"
@@ -228,8 +269,8 @@
                 { x: 2021, y: 38 },
                 { x: 2022, y: 67 },
                 { x: 2023, y: 60 }, // Penurunan pada tahun 2023
-                { x: 2024, y: 121 },
-                { x: 2024, y: 100 },
+                { x: 2024, y: 140 },
+                
             ];
     
             // Simulasi data untuk grafik prediksi (kuning)
