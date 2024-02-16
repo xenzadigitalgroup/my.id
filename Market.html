@@ -122,14 +122,35 @@
             background-color: #f00;
         }
         #graph-container {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            width: auto;
-            margin: 0 auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1px;
+    width: auto;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#blink-point {
+    position: absolute;
+    top: calc(60% - 5px); /* Adjust the top value based on your desired position */
+    left: calc(68% - 5px); /* Adjust the left value based on your desired position */
+    width: 10px;
+    height: 10px;
+    background-color: #005eff; /* Color of the blinking point */
+    border-radius: 50%;
+    animation: blink 1s infinite; /* Adjust the animation duration as needed */
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
 
         canvas {
             width: 100%; /* Pengisi penuh lebar dalam kotak */
@@ -205,6 +226,7 @@
         <h1>MARKET RDN XENZA DIGITAL GROUP</h1>
     </header>
     <div id="graph-container">
+        <div id="blink-point"></div>
         <div class="informasi">
             <p class="marquee">XDG-SAHAM🔺<span class="green">+11,7%</span> | XDG-OBG🔻<span class="red">-7.89%</span> | XDG-MMRKT🔺<span class="green">+9,3%</span> | XBNK🔺<span class="green">+Rp476.8Jt</span> | Int🔺<span class="green">+3,5%</span></p>
         </div>
@@ -269,7 +291,7 @@
                 { x: 2021, y: 38 },
                 { x: 2022, y: 67 },
                 { x: 2023, y: 60 }, // Penurunan pada tahun 2023
-                { x: 2024, y: 140 },
+                { x: 2024, y: 143 },
                 
             ];
     
